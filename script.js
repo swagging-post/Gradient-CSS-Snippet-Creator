@@ -5,10 +5,14 @@ function createGradient() {
     const degree = document.getElementById('degree').value;
 
     const gradientBox = document.getElementById('gradient-box');
+    const gradientCode = document.getElementById('gradient-code');
+
     if (gradientType === "radial-gradient") {
         gradientBox.style.backgroundImage = `${gradientType}(${colorLeft}, ${colorRight})`;
+        gradientCode.textContent = `background-color: ${gradientType}(${colorLeft}, ${colorRight});`;
     } else {
         gradientBox.style.backgroundImage = `${gradientType}(${degree}deg, ${colorLeft}, ${colorRight})`;
+        gradientCode.textContent = `background-color: ${gradientType}(${degree}deg, ${colorLeft}, ${colorRight});`;
     }
 }
 
