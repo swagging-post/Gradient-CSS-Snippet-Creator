@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient CSS Snippet Creator</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="gradient-box-container">
+        <div id="gradient-box"></div>
+    </div>
+
+    <div class="control-container">
+        <label for="color-left">Left Color:</label>
+        <input type="color" id="color-left">
+
+        <label for="color-right">Right Color:</label>
+        <input type="color" id="color-right">
+    </div>
+
+    <div class="control-container">
+        <label for="gradient-type">Gradient Type:</label>
+        <select id="gradient-type">
+            <option value="linear-gradient">Linear Gradient</option>
+            <option value="radial-gradient">Radial Gradient</option>
+            <option value="repeating-linear-gradient">Repeating Linear Gradient</option>
+        </select>
+
+        <label for="degree">Degree:</label>
+        <input type="number" id="degree" min="0" max="365" value="0">
+    </div>
+
+    <div class="control-container">
+        <div class="tooltip">
+            <label for="dynamic-update">Dynamic Updating:</label>
+            <input type="checkbox" id="dynamic-update">
+            <span class="tooltiptext">When a value is changed, you don't have to press Create for it to update</span>
+        </div>
+
+        <button class="button" id="create-button" onclick="createGradient()">Create</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
